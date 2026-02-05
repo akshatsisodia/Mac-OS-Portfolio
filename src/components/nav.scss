@@ -17,5 +17,18 @@ nav{
         gap: 1rem;
     }
 
+    .left{
+
+        .nav-item ,.apple-icon{
+            cursor: pointer;
+        }
+    }
+
+    .right{
+        .nav-item{
+            cursor: pointer;
+        }
+    }
+
    
 }

@@ -17,7 +17,7 @@ const DateTime = () => {
     return () => clearInterval(id);
   }, []);
 
-  return <div className="date-time">{formatDateTime(now)}</div>;
+  return <div style={{cursor:"default"}} className="date-time">{formatDateTime(now)}</div>;
 };
 
 export default DateTime;

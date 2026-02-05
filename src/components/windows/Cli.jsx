@@ -103,7 +103,7 @@ const commands = {
   },
 };
 
-const Cli = () => {
+const Cli = ({windowName,setWindowState,windowState}) => {
   const welcome = (
     <div>
       <div className="cli-welcome-title">Welcome to Akshat&apos;s interactive terminal</div>
@@ -114,13 +114,13 @@ const Cli = () => {
   );
 
   return (
-    <MacWindow width="30vw">
+    <MacWindow width="30vw" windowName={windowName} setWindowState={setWindowState} windowState={windowState}>
       <div className="cli-window">
         <div className="terminal-shell">
           <Terminal
             commands={commands}
             welcomeMessage={welcome}
-            promptLabel={"C:/Desktop/Users>~$"}
+            promptLabel={"Portfolio@terminal~$"}
             style={{
               width: "100%",
               height: "100%",
@@ -132,9 +132,9 @@ const Cli = () => {
               borderRadius: "6px",
               paddingTop: "0.6rem",
             }}
-            messageStyle={{ color: "#b9f286", lineHeight: "1.6" }}
-            promptLabelStyle={{ color: "#7fffbf", fontWeight: 600 }}
-            inputStyle={{ fontSize: "1rem", color: "#e6ffe9", caretColor: "#7fffbf" }}
+            messageStyle={{ color: "#b9f286", lineHeight: "1.6"}}
+            promptLabelStyle={{ color: "#7fffbf", fontWeight: 600,fontSize:"1.2rem" }}
+            inputStyle={{ fontSize: "1.2rem", color: "#e6ffe9", caretColor: "#7fffbf" }}
             autofocus={true}
           />
         </div>
